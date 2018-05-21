@@ -1,4 +1,4 @@
-#display-area{
+ #display-area{
    position: fixed;
     top: 50%;
     left: 50%;
@@ -21,5 +21,36 @@
 }
 
 #question-display{
-  font-size: 40px;
+  position: fixed;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: auto;
+    font-size: 40px;
+    color:orange;
+}
+
+#time-display{
+   position: fixed;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    font-size: 40px;
+    color:orange;
+}
+
+.answer-display{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 40px;
+    color:orange;
 }

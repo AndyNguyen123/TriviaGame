@@ -16,13 +16,14 @@ const displayQuestion = function(question) {
   $('#question-display').text(question);
 }
 const displayAnswerChoice = function(answer) {
-  const answerBlock = $(`<div>${answer}</div>`);
-  $('.answer-choice').append(answerBlock);
+  const answerBlock = $(`<div class='col-md-2 answer-choice'>${answer}</div>`);
+  answerBlock.on('click', answerClicked);
+  $('.answer-display').append(answerBlock);
 }
 
 const count = function () {
   time--;
-  $('#time-display').text(time);
+  $('#time-display').text('Time Left: ' + time);
 }
 
 $('#start-button').on('click', function(){
@@ -34,8 +35,13 @@ $('#start-button').on('click', function(){
   });
 })
 
-$('.answer-choice').on('click', function() {
+function answerClicked () {
   isQuestionAnswered = true;
-  countDown(time);
+  clearInterval(intervalId);
+  time=30;
+  start();
 
-})
+  if(isQuestionAnswered) {
+    
+  }
+}
